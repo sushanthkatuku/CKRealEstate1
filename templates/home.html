@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - CK Real Estate{% endblock %}
+
+{% block content %}
+<div style="background: url('/static/images/home-banner.jpg') no-repeat center center/cover; height: 60vh; color: white; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+    <h1 style="font-size: 3rem; margin: 0;">Welcome to CK Real Estate</h1>
+    <p style="font-size: 1.2rem; margin-top: 10px;">Find properties tailored to your needs.</p>
+    <a href="/listings" style="background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">View Listings</a>
+</div>
+
+<section style="padding: 20px;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Why Choose Us?</h2>
+    <div style="display: flex; justify-content: space-around;">
+        <div style="text-align: center; width: 30%;">
+            <div style="font-size: 2rem; color: #007bff;">🏠</div>
+            <h3>Modern Homes</h3>
+            <p>Explore a variety of modern architectural designs.</p>
+        </div>
+        <div style="text-align: center; width: 30%;">
+            <div style="font-size: 2rem; color: #28a745;">📍</div>
+            <h3>Prime Locations</h3>
+            <p>Find homes in the most desirable areas.</p>
+        </div>
+        <div style="text-align: center; width: 30%;">
+            <div style="font-size: 2rem; color: #dc3545;">📞</div>
+            <h3>Easy Contact</h3>
+            <p>Reach out directly for quick assistance.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="text-align: center; margin-top: 30px;">
+    {% if owner %}
+        {% if owner.image %}
+            <img src="{{ owner.image.url }}" alt="{{ owner.name }}" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+        {% endif %}
+        <h1 style="font-size: 2rem; margin-bottom: 10px;">{{ owner.name }}</h1>
+        <p style="font-size: 1rem; color: #555;">{{ owner.bio }}</p>
+        <div style="margin-top: 20px;">
+            <h3>Contact Information:</h3>
+            <p><strong>Email:</strong> <a href="mailto:{{ owner.email }}" style="color: #007bff;">{{ owner.email }}</a></p>
+            <p><strong>Phone:</strong> <a href="tel:{{ owner.phone }}" style="color: #007bff;">{{ owner.phone }}</a></p>
+        </div>
+    {% else %}
+        <h2 style="color: #ff0000;">No Owner Profile Available</h2>
+    {% endif %}
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

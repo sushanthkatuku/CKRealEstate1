@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Welcome to CK Real Estate</h1>
+  <p>Explore our properties and neighborhoods:</p>
+  <ul>
+    <li><strong>Total Properties:</strong> {{ num_properties }}</li>
+    <li><strong>Available Properties:</strong> {{ num_available_properties }}</li>
+    <li><strong>Neighborhoods:</strong> {{ num_neighborhoods }}</li>
+    <li><strong>Property Types:</strong> {{ num_property_types }}</li>
+  </ul>
+
+  {% if featured_property %}
+    <h2>Featured Property</h2>
+    <div>
+      <h3>{{ featured_property.property.address }}</h3>
+      <p><strong>Price:</strong> ${{ featured_property.property.price }}</p>
+      <p><strong>Neighborhood:</strong> {{ featured_property.property.neighborhood.name }}</p>
+      <p><strong>Type:</strong> {{ featured_property.property.property_type.name }}</p>
+      <p>{{ featured_property.property.description }}</p>
+    </div>
+  {% else %}
+    <p>No featured property at the moment. Check back soon!</p>
+  {% endif %}
+{% endblock %}
